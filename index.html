@@ -38,10 +38,17 @@ section{padding:96px 0}
 .section-head .eyebrow{color:var(--red);display:block;margin-bottom:14px}
 .section-head h2{font-size:clamp(30px,4.4vw,44px);font-weight:800;color:var(--red)}
 .section-head p.lede{margin-top:18px;font-size:19px;color:var(--gray)}
+.subhead{font-family:var(--sans);font-weight:600;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--red);display:block;margin:8px 0 22px}
 .on-red .section-head h2{color:var(--cream)}
 .on-red .section-head .eyebrow{color:var(--dawn-soft)}
 .on-red{background:var(--red);color:var(--cream)}
 .on-red p{color:#f3e7dd}
+
+/* timeline org-name badge */
+.tl-orgtag{margin-top:12px;text-align:center;font-family:var(--sans);font-weight:700;font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--red);opacity:0;transform:translateY(-4px);transition:opacity .55s ease,transform .55s ease}
+.tl-orgtag.show{opacity:1;transform:none}
+.tl-orgtag #tlOrgTagText{display:inline-block;padding:6px 16px;border-radius:20px;background:rgba(126,35,32,.08);border:1px solid rgba(126,35,32,.18)}
+@media(max-width:1080px){.tl-orgtag{margin-top:8px}.tl-orgtag #tlOrgTagText{background:rgba(15,7,4,.06);border-color:rgba(15,7,4,.14)}}
 
 /* flame divider */
 .flame-div{display:flex;align-items:center;gap:14px;margin:0 auto;max-width:1120px;padding:0 24px}
@@ -112,6 +119,14 @@ nav .links a:hover{opacity:1;color:var(--dawn-soft)}
 .stat .num{font-family:var(--sans);font-weight:900;font-size:clamp(38px,4.5vw,54px);color:var(--dawn-soft);line-height:1}
 .stat .lab{margin-top:12px;font-family:var(--sans);font-weight:600;font-size:13.5px;letter-spacing:.03em;color:var(--cream);line-height:1.45}
 .statnote{margin-top:20px;font-size:13.5px;color:#e9cdb8;font-style:italic}
+
+/* quiet "what it has reached now" strip — informational, not a billboard */
+.reach-strip{display:flex;flex-wrap:wrap;gap:10px 36px;margin-top:38px;padding-top:22px;border-top:1px solid rgba(126,35,32,.14)}
+.reach-item{display:flex;align-items:baseline;gap:8px}
+.reach-num{font-family:var(--sans);font-weight:800;font-size:19px;color:var(--red)}
+.reach-lab{font-family:var(--sans);font-size:13px;color:var(--gray);letter-spacing:.01em}
+.reach-note{margin-top:8px;font-family:var(--sans);font-size:11.5px;color:var(--gray);opacity:.75;font-style:italic}
+@media(max-width:600px){.reach-strip{gap:8px 24px}}
 .need-story{max-width:780px;margin:0 0 44px;font-size:19px}
 .need-story strong{color:var(--dawn-soft)}
 
@@ -312,7 +327,7 @@ footer .fine{margin-top:44px;padding-top:22px;border-top:1px solid rgba(252,251,
   <div class="inner">
     <span class="eyebrow">1927 – 2026 · The Centenary Celebration<br class="eyebrow-br"> Madiyala, Dakshina Kannada</span>
     <h1>Anna's<br><em>Homecoming</em></h1>
-    <p class="sub">A hundred years ago, Sri Madiyala Narayana Bhat was born in this village. His life changed thousands of ours through education. As his 100th year approaches, we are celebrating his centenary by bringing a university science college right back to his birthplace — giving the young people of Madiyala the chance to earn a degree without leaving home.</p>
+    <p class="sub">A hundred years ago, Sri Madiyala Narayana Bhat was born in this village. His life changed thousands of ours through education. As his 100th year approaches, we are celebrating his centenary by bringing a free Bachelors in Computational Sciences and Artificial Intelligence right back to his birthplace — giving the young people of Madiyala the chance to earn a degree without leaving home.</p>
     <div class="ctas">
       <a class="btn btn-dawn" href="#involved">Be Part of the Centenary</a>
       <a class="btn btn-ghost" href="#need">Why a Free B.Sc. <span class="hide-m">Computational Sciences &amp; AI </span>Degree</a>
@@ -326,12 +341,13 @@ footer .fine{margin-top:44px;padding-top:22px;border-top:1px solid rgba(252,251,
   <div class="wrap">
     <div class="section-head rv">
       <span class="eyebrow">Our Vision</span>
-      <h2>Education Comes Home to Madiyala</h2>
+      <h2>Higher Education Comes Home to Madiyala</h2>
     </div>
     <div class="vision-grid">
       <div class="rv">
         <p>Every year, bright students from Madiyala and its surrounding villages finish their schooling — and then stop. The nearest degree colleges are hours away, and for many families the cost of hostels, travel and fees puts higher education permanently out of reach. Anna believed no child should have to choose between their home and their future.</p>
-        <p>To understand the significance of this homecoming, we look back at a century of quiet, unstoppable growth. What began as a simple idea in this village has turned into one of the largest free education movements in the country.</p>
+        <p class="pull">Anna believed no child should be deprived of education.</p>
+        <p>To understand the significance of this homecoming, we look back at a century of quiet, unstoppable growth. What began as a simple idea of Loka Seva Vrinda in this village has turned into one of the largest free education movements — One World One Family — in the country as well as abroad.</p>
       </div>
       <div class="imgcard rv">
         <img src="https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/3d%20View%20Maidyala%20Campus.png" alt="3D architectural render of the new Madiyala campus" loading="lazy">
@@ -350,7 +366,7 @@ footer .fine{margin-top:44px;padding-top:22px;border-top:1px solid rgba(252,251,
     <div class="section-head rv" style="margin-left:auto;margin-right:auto;text-align:center;max-width:760px">
       <span class="eyebrow">1927 → 2026</span>
       <h2>From a Single Seed to the Mighty Mission</h2>
-      <p class="lede">A century of quiet, unstoppable growth.</p>
+      <p class="lede">The power of a pure and selfless thought.</p>
     </div>
     <div class="tl-grid">
       <!-- Birth year confirmed as 1927 (30-11-1927, per alikeonline.org and client). Centenary framing is 1927-2026 —
@@ -364,10 +380,12 @@ footer .fine{margin-top:44px;padding-top:22px;border-top:1px solid rgba(252,251,
         <div class="tl-item rv" data-key="1960"><div class="year">1960–1963</div><h3>Loka Seva Vrinda Begins & Alike Campus Established</h3><p>Driven to serve the nation, Anna gathers a dedicated band of workers — the Tyagajeevi — and forms Loka Seva Vrinda in 1960, dedicating their lives to rural upliftment. The organisation is formally launched, and on 6 June 1963, his mother, Smt. Gouramma, hands over the primary school in Alike to Loka Seva Vrinda, establishing the first major campus.</p></div>
         <div class="tl-item rv" data-key="1967"><div class="year">1967–1972</div><h3>Expansion of Alike Campus</h3><p>The Alike campus grows significantly, marked by the inauguration of the Loka Seva Junior College.</p></div>
         <div class="tl-item rv" data-key="1972"><div class="year">1972</div><h3>Muddenahalli Campus & Divine Assurance</h3><p>The mission expands to a second location in Muddenahalli. Bhagavan Sri Sathya Sai Baba blesses the construction of the school building there and resolves their financial worries with a profound reassurance: <em>"Shaale madidare saala hoguttade"</em> (ಶಾಲೆ ಮಾಡಿದರೆ ಸಾಲ ಹೋಗುತ್ತದೆ) — "If you build a school, the debt will go away." He instructs Anna's team to build this second school in Muddenahalli, promising that all debts would be taken care of.</p></div>
-        <div class="tl-item rv" data-key="1977"><div class="year">1977</div><h3>Sri Sathya Sai Loka Seva Trust</h3><p>Following Narayana Bhat's passing, the organisation is renamed Sri Sathya Sai Loka Seva Trust, and Bhagavan Baba ensures the continued operation of both campuses.</p></div>
+        <div class="tl-item rv" data-key="1977a"><div class="year">1977</div><h3>A Letter of Solace</h3><p>As news of Narayana Bhat's passing reaches Puttaparthi, Bhagavan Sri Sathya Sai Baba writes personally to the grieving family — words of comfort, and an assurance that the mission Anna had begun would not be allowed to falter.</p></div>
+        <div class="tl-item rv" data-key="1977b"><div class="year">1977</div><h3>Consoling a Mother's Grief</h3><p>Baba goes further still, personally consoling Anna's mother, Smt. Gouramma, in her sorrow — a closeness that binds the family, and the institutions they built together, ever more firmly to him.</p></div>
+        <div class="tl-item rv" data-key="1977c"><div class="year">1977</div><h3>Sri Sathya Sai Loka Seva Trust</h3><p>Following Narayana Bhat's passing, the organisation is renamed Sri Sathya Sai Loka Seva Trust. Baba signs to affirm the transition, ensuring the continued operation of both campuses.</p></div>
         <div class="tl-item rv" data-key="2018"><div class="year">2012–2023</div><h3>Higher Education Expansion & University Recognition</h3><p>The vision expands into higher education with the Sri Sathya Sai University for Human Excellence in Gulbarga (Kalaburagi). New campuses follow across the region through the decade, and in 2018 the Government of Karnataka grants official university status — opening the way for free undergraduate, postgraduate, and doctoral programmes.</p></div>
         <div class="tl-item rv" data-key="2023med"><div class="year">2023</div><h3>World's First Free Medical College</h3><p>Under the University's umbrella, the Sri Madhusudan Sai Institute of Medical Sciences and Research (SMSIMSR) is established in Muddenahalli. Inaugurated by Prime Minister Narendra Modi on 25 March 2023, it stands as the world's first completely free medical college, training doctors to serve the needy and underserved with absolutely no tuition fees.</p></div>
-        <div class="tl-item lit rv" data-key="2027"><div class="year">2026 · Upcoming this November</div><h3>A Century and Still Batting! — The Madiyala Campus</h3><p>To mark the 100th birth anniversary of founder Sri Madiyala Narayana Bhat (Anna) on 30 November 2026, the mission comes full circle to his native soil. The Sri Sathya Sai University for Human Excellence is establishing a brand-new campus in Madiyala/Alike alongside a free public healthcare facility — offering modern, degree-level education, including a Bachelors in Computational Sciences and Artificial Intelligence, and equipping rural youth with technological mastery, completely free of cost.</p>
+        <div class="tl-item lit rv" data-key="2026b"><div class="year">2026 · Upcoming this November</div><h3>A Century and Still Batting! — The Madiyala Campus</h3><p>To mark the 100th birth anniversary of founder Sri Madiyala Narayana Bhat (Anna) on 30 November 2026, the mission comes full circle to his native soil. The Sri Sathya Sai University for Human Excellence is establishing a brand-new campus in Madiyala/Alike alongside a free public healthcare facility — offering modern, degree-level education, including a Bachelors in Computational Sciences and Artificial Intelligence, and equipping rural youth with technological mastery, completely free of cost.</p>
         <div class="tl-finale rv"><p>The seed planted in 1927 breaks ground where it was born.</p><a href="#involved">Join the Homecoming →</a></div></div>
       </div>
       <!-- NOTE FOR CLIENT: the final frame now deliberately shows the full-colour campus render — the
@@ -377,16 +395,20 @@ footer .fine{margin-top:44px;padding-top:22px;border-top:1px solid rgba(252,251,
            is reusing the Muddenahalli construction photo. Swap these for dedicated photos when available. -->
       <div class="tl-col-sticky">
         <div class="tl-sticky"><div class="tl-sticky-frame">
-          <div class="tl-simg active" data-key="1927" style="--img:url('https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/1927-narayana-bhat-with-parents.jpeg')"><img loading="lazy" src="https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/1927-narayana-bhat-with-parents.jpeg" alt="Young Narayana Bhat as a boy, standing between his father and mother"><div class="yr">1927</div><div class="cap">With his parents</div></div>
-          <div class="tl-simg" data-key="1950" style="--img:url('https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/1950-narayana-bhat-with-students.jpeg')"><img loading="lazy" src="https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/1950-narayana-bhat-with-students.jpeg" alt="Narayana Bhat with his students and fellow teachers outside the school"><div class="yr">1950</div><div class="cap">A peek into his love for students</div></div>
+          <div class="tl-simg active" data-key="1927" style="--img:url('https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/1927-narayana-bhat-with-parents.jpeg')"><img loading="lazy" src="https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/1927-narayana-bhat-with-parents.jpeg" alt="Young Narayana Bhat as a boy, standing between his father and mother"><div class="yr">1927</div><div class="cap">The early years with his parents</div></div>
+          <div class="tl-simg" data-key="1950" style="--img:url('https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/1950-narayana-bhat-with-students.jpeg')"><img loading="lazy" src="https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/1950-narayana-bhat-with-students.jpeg" alt="Narayana Bhat with his students and fellow teachers outside the school"><div class="yr">1950</div><div class="cap">A life dedicated to his students</div></div>
           <div class="tl-simg" data-key="1960" style="--img:url('https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/Loka%20seva%20vrinda.png')"><img loading="lazy" src="https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/Loka%20seva%20vrinda.png" alt="Loka Seva Vrinda gathering"><div class="yr">1960</div><div class="cap">Loka Seva Vrinda is born</div></div>
           <div class="tl-simg" data-key="1967" style="--img:url('https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/loka%20seva%20junior%20college.png')"><img loading="lazy" src="https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/loka%20seva%20junior%20college.png" alt="Loka Seva Junior College, Alike"><div class="yr">1967–1972</div><div class="cap">Loka Seva Junior College opens</div></div>
-          <div class="tl-simg" data-key="1972" style="--img:url('https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/Muddenahali%20Groud%20breaking%20cermony.png')"><img loading="lazy" src="https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/Muddenahali%20Groud%20breaking%20cermony.png" alt="Muddenahalli ground-breaking ceremony"><div class="yr">1972</div><div class="cap">Muddenahalli ground-breaking</div></div>
-          <div class="tl-simg" data-key="1977" style="--img:url('https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/Baba%20Signing.png')"><img loading="lazy" src="https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/Baba%20Signing.png" alt="Sri Sathya Sai Baba signing the formation of the trust"><div class="yr">1977</div><div class="cap">Anna offers it all</div></div>
-          <div class="tl-simg" data-key="2018" style="--img:url('https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/Sathya%20sai%20University%20for%20Human%20Excellence.jpg')"><img loading="lazy" src="https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/Sathya%20sai%20University%20for%20Human%20Excellence.jpg" alt="Sri Sathya Sai University for Human Excellence campus"><div class="yr">2012–2023</div><div class="cap">A full university</div></div>
+          <div class="tl-simg" data-key="1972" style="--img:url('https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/Muddenahali%20Groud%20breaking%20cermony.png')"><img loading="lazy" src="https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/Muddenahali%20Groud%20breaking%20cermony.png" alt="Muddenahalli ground-breaking ceremony"><div class="yr">1972</div><div class="cap">Ground-breaking at Muddenahalli</div></div>
+          <div class="tl-simg" data-key="1977a" style="--img:url('https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/Baba%27s%20letter%20to%20Narayan%20Bhats%20mother%20after%20the%20demise%20of%20naryan%20bhat.png')"><img loading="lazy" src="https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/Baba%27s%20letter%20to%20Narayan%20Bhats%20mother%20after%20the%20demise%20of%20naryan%20bhat.png" alt="Bhagavan Sri Sathya Sai Baba's letter to the Narayana Bhat family after his passing"><div class="yr">1977</div><div class="cap">A letter of solace from Baba</div></div>
+          <div class="tl-simg" data-key="1977b" style="--img:url('https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/Baba%27s%20letter%20to%20Narayan%20Bhats%20mother%20after%20the%20demise%20of%20naryan%20bhat.png')"><img loading="lazy" src="https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/Baba%27s%20letter%20to%20Narayan%20Bhats%20mother%20after%20the%20demise%20of%20naryan%20bhat.png" alt="Baba consoling Anna's mother, Smt. Gouramma, after her son's passing"><div class="yr">1977</div><div class="cap">Baba consoles a mother's grief</div></div>
+          <div class="tl-simg" data-key="1977c" style="--img:url('https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/Baba%20Signing.png')"><img loading="lazy" src="https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/Baba%20Signing.png" alt="Sri Sathya Sai Baba signing the formation of the trust"><div class="yr">1977</div><div class="cap">Anna offers the institutions to Baba</div></div>
+          <div class="tl-simg" data-key="2018" style="--img:url('https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/Sathya%20sai%20University%20for%20Human%20Excellence.jpg')"><img loading="lazy" src="https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/Sathya%20sai%20University%20for%20Human%20Excellence.jpg" alt="Sri Sathya Sai University for Human Excellence campus"><div class="yr">2012–2023</div><div class="cap">Elevated to a University for Human Excellence</div></div>
           <div class="tl-simg" data-key="2023med" style="--img:url('https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/Free%20Medical%20College.jpg')"><img loading="lazy" src="https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/Free%20Medical%20College.jpg" alt="Sri Madhusudan Sai Institute of Medical Sciences and Research, Muddenahalli"><div class="yr">2023</div><div class="cap">World's first free medical college</div></div>
-          <div class="tl-simg color" data-key="2027" style="--img:url('https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/3d%20View%20Maidyala%20Campus.png')"><img loading="lazy" src="https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/3d%20View%20Maidyala%20Campus.png" alt="3D render of the new Madiyala campus"><div class="yr">2026</div><div class="cap">The circle completes — the campus rises in Madiyala</div></div>
-        </div></div>
+          <div class="tl-simg color" data-key="2026b" style="--img:url('https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/3d%20View%20Maidyala%20Campus.png')"><img loading="lazy" src="https://raw.githubusercontent.com/owofoneworldonefamily-design/Madiyala/main/3d%20View%20Maidyala%20Campus.png" alt="3D render of the new Madiyala campus"><div class="yr">2026</div><div class="cap">The circle completes — the campus rises in Madiyala</div></div>
+        </div>
+        <div class="tl-orgtag" id="tlOrgTag"><span id="tlOrgTagText"></span></div>
+        </div>
       </div>
     </div>
   </div>
@@ -417,7 +439,7 @@ footer .fine{margin-top:44px;padding-top:22px;border-top:1px solid rgba(252,251,
       <h2>The Campus &amp; The Capital Budget</h2>
       <p class="lede">To teach modern computer science and pure sciences properly, you cannot cut corners. We are building a permanent, 30,000-square-foot campus in Bantwala Taluk, Dakshina Kannada, designed specifically for coastal weather, open community, and university-grade practical work.</p>
     </div>
-    <p class="eyebrow rv" style="color:var(--red);display:block;margin:8px 0 22px">Campus Facilities</p>
+    <p class="subhead rv">Campus Facilities</p>
     <p class="rv" style="font-size:17px;color:var(--gray);max-width:780px;margin-bottom:28px">Our building is equipped with a comprehensive range of amenities designed to support academics, daily living, and administration:</p>
     <div class="why-grid rv" style="margin-bottom:22px">
       <div class="why"><div><h3>Academic &amp; Learning Spaces</h3><ul style="margin-top:6px;padding-left:18px;font-size:15px;color:var(--gray);line-height:1.7"><li>Spacious Classrooms</li><li>Well-Equipped Laboratories</li><li>Student Libraries</li></ul></div></div>
@@ -572,15 +594,27 @@ addEventListener('keydown',e=>{if(e.key==='Escape')lb.classList.remove('open')})
 const tlItems=[...document.querySelectorAll('.tl-item[data-key]')];
 const tlImgs=[...document.querySelectorAll('.tl-simg[data-key]')];
 const tlEl=document.getElementById('tl'),tlFill=document.getElementById('tlFill');
+// the mission's name at each point in its history — shown as a quiet badge over the timeline photo
+const ORG_NAMES={
+  '1960':'Loka Seva Vrinda','1967':'Loka Seva Vrinda','1972':'Loka Seva Vrinda',
+  '1977a':'Loka Seva Vrinda','1977b':'Loka Seva Vrinda',
+  '1977c':'Sri Sathya Sai Loka Seva Vrinda',
+  '2018':'Sri Sathya Sai University for Human Excellence',
+  '2023med':'One World One Family Mission','2026b':'One World One Family Mission'
+};
+const tlOrgTag=document.getElementById('tlOrgTag'),tlOrgTagText=document.getElementById('tlOrgTagText');
 let tlIO=null;
 function setActive(key){
   const idx=tlItems.findIndex(it=>it.dataset.key===key);
   tlItems.forEach((it,i)=>{
     it.classList.toggle('active',i===idx);
-    it.classList.toggle('lit',i<=idx||it.dataset.key==='1927'||it.dataset.key==='2027');
+    it.classList.toggle('lit',i<=idx||it.dataset.key==='1927'||it.dataset.key==='2026b');
   });
   tlImgs.forEach(im=>im.classList.toggle('active',im.dataset.key===key));
-  document.querySelectorAll('.tl-sticky-frame').forEach(f=>f.classList.toggle('finale',key==='2027'));
+  document.querySelectorAll('.tl-sticky-frame').forEach(f=>f.classList.toggle('finale',key==='2026b'));
+  const orgName=ORG_NAMES[key];
+  if(orgName){tlOrgTagText.textContent=orgName;tlOrgTag.classList.add('show');}
+  else{tlOrgTag.classList.remove('show');}
   tlEl.classList.add('focus-mode');
 }
 function buildTlIO(){
