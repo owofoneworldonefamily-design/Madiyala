@@ -121,11 +121,23 @@ nav .links a:hover{opacity:1;color:var(--dawn-soft)}
 .card{background:#fff;border:1px solid rgba(126,35,32,.12);border-top:4px solid var(--red);border-radius:6px;padding:30px 26px;box-shadow:0 8px 26px rgba(45,45,45,.06)}
 .card h3{font-size:19px;font-weight:700;color:var(--red);margin-bottom:10px}
 .card p{font-size:15.5px;color:var(--gray)}
-table{width:100%;border-collapse:collapse;background:#fff;border-radius:6px;overflow:hidden;box-shadow:0 10px 30px rgba(45,45,45,.07);font-size:15.5px}
-th{background:var(--red);color:var(--cream);font-family:var(--sans);font-weight:700;text-align:left;padding:15px 18px;font-size:13.5px;letter-spacing:.05em;text-transform:uppercase}
-td{padding:15px 18px;border-bottom:1px solid rgba(126,35,32,.1);vertical-align:top}
-td:first-child{font-family:var(--sans);font-weight:700;color:var(--red);white-space:nowrap}
+table{width:100%;border-collapse:collapse;background:#fff;border-radius:8px;overflow:hidden;box-shadow:0 10px 30px rgba(45,45,45,.07);font-size:15.5px;border:1px solid rgba(126,35,32,.14)}
+th{background:var(--red);color:var(--cream);font-family:var(--sans);font-weight:700;padding:15px 18px;font-size:13.5px;letter-spacing:.05em;text-transform:uppercase;text-align:left}
+th:last-child{text-align:right}
+td{padding:14px 18px;border-bottom:1px solid rgba(126,35,32,.1);vertical-align:middle}
+td:first-child{font-family:var(--sans);font-weight:700;color:var(--red);border-right:1px solid rgba(126,35,32,.1)}
+td:last-child{text-align:right;font-family:var(--sans);font-variant-numeric:tabular-nums;color:var(--charcoal);white-space:nowrap}
 tr:last-child td{border-bottom:none}
+tr:nth-child(even) td{background:rgba(126,35,32,.025)}
+tr.row-total td{background:rgba(126,35,32,.05);font-weight:700}
+tr.row-total td:first-child{color:var(--charcoal)}
+tr.row-grand td{background:rgba(232,161,60,.14);font-weight:800;border-top:2px solid var(--red)}
+tr.row-grand td:first-child{color:var(--red);font-size:16px}
+tr.row-grand td:last-child{color:var(--red);font-size:17px}
+tr.row-usd td{background:rgba(232,161,60,.14);border-top:none}
+tr.row-usd td:first-child{color:var(--red);font-weight:700}
+tr.row-usd td:last-child{color:var(--red)}
+.fx-note{display:block;font-weight:400;color:var(--gray);font-size:13px;margin-top:2px}
 .tablewrap{overflow-x:auto;margin-top:8px}
 .finenote{margin-top:14px;font-size:13.5px;font-style:italic;color:var(--gray)}
 
@@ -439,10 +451,10 @@ footer .fine{margin-top:44px;padding-top:22px;border-top:1px solid rgba(252,251,
           <tr><td>External electrical works</td><td>₹20,00,000</td></tr>
           <tr><td>Landscape</td><td>₹15,00,000</td></tr>
           <tr><td>Access road (construction only)</td><td>₹20,00,000</td></tr>
-          <tr><td style="color:var(--charcoal)">Total Amount</td><td style="color:var(--charcoal)">₹10,01,00,000</td></tr>
-          <tr><td style="color:var(--charcoal)">GST @ 18%</td><td style="color:var(--charcoal)">₹1,80,18,000</td></tr>
-          <tr><td>Grand Total</td><td>₹11,81,18,000</td></tr>
-          <tr><td>Grand Total (USD, approx.)</td><td>$1.32 Million <span style="font-weight:400;color:var(--gray)">(@ ₹90/USD)</span></td></tr>
+          <tr class="row-total"><td>Total Amount</td><td>₹10,01,00,000</td></tr>
+          <tr class="row-total"><td>GST @ 18%</td><td>₹1,80,18,000</td></tr>
+          <tr class="row-grand"><td>Grand Total</td><td>₹11,81,18,000</td></tr>
+          <tr class="row-usd"><td>Grand Total (USD, approx.)</td><td>$1.32 Million<span class="fx-note">@ ₹90/USD</span></td></tr>
         </tbody>
       </table>
     </div>
