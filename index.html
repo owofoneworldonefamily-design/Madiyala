@@ -103,19 +103,19 @@ nav .links a:hover{opacity:1;color:var(--dawn-soft)}
 /* VISION */
 .vision-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:start}
 @media(max-width:900px){.vision-grid{grid-template-columns:1fr}}
-.vision-grid .imgcard{border-radius:6px;overflow:hidden;box-shadow:0 24px 60px rgba(94,24,21,.22);position:sticky;top:100px;max-width:360px}
-.vision-grid .imgcard img{aspect-ratio:4/5;object-fit:cover;width:100%;height:auto;max-height:420px}
-@media(max-width:900px){.vision-grid .imgcard{position:static;top:auto;max-width:340px;margin:0 auto}.vision-grid .imgcard img{aspect-ratio:4/3;max-height:none}}
+.vision-grid .imgcard{border-radius:6px;overflow:hidden;box-shadow:0 24px 60px rgba(94,24,21,.22);max-width:420px;position:sticky;top:100px}
+.vision-grid .imgcard img{aspect-ratio:4/5;object-fit:cover;width:100%;height:auto}
+@media(max-width:900px){.vision-grid .imgcard{max-width:360px;margin:0 auto;position:static;top:auto}}
 .pull{border-left:3px solid var(--red);padding-left:22px;margin:26px 0;font-style:italic;font-size:19px;color:var(--red);font-family:var(--serif)}
 .vision-copy{max-width:560px}
-.vision-copy p{font-size:16.5px;line-height:1.62}
-.vision-copy strong{color:var(--dawn-soft);font-weight:600}
+.vision-copy p{font-size:16.5px;line-height:1.62;color:var(--gray)}
+.vision-copy strong{color:var(--red);font-weight:600}
 .vision-grid p+p{margin-top:16px}
-.vision-sig{margin-top:28px;padding-top:20px;border-top:1px solid rgba(252,251,242,.22)}
-.vision-sig .vs-name{font-family:var(--sans);font-weight:800;font-size:21px;color:var(--dawn-soft);letter-spacing:.005em}
-.vision-sig .vs-role{font-family:var(--sans);font-weight:500;font-size:12.5px;letter-spacing:.03em;color:#f3e7dd;opacity:.85;line-height:1.75;margin-top:6px}
-.vision-note{margin-top:20px;font-family:var(--serif);font-style:italic;font-size:16px;color:#f3e7dd;opacity:.92}
-.vision-note strong{color:var(--dawn-soft);font-weight:600;font-style:normal}
+.vision-sig{margin-top:28px;padding-top:20px;border-top:1px solid rgba(126,35,32,.16)}
+.vision-sig .vs-name{font-family:var(--sans);font-weight:800;font-size:21px;color:var(--red);letter-spacing:.005em}
+.vision-sig .vs-role{font-family:var(--sans);font-weight:500;font-size:12.5px;letter-spacing:.03em;color:var(--gray);opacity:.9;line-height:1.75;margin-top:6px}
+.vision-note{margin-top:20px;font-family:var(--serif);font-style:italic;font-size:16px;color:var(--gray)}
+.vision-note strong{color:var(--red);font-weight:600;font-style:normal}
 
 /* NEED / STATS */
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:2px;background:rgba(252,251,242,.18);border-radius:8px;overflow:hidden;margin-top:14px}
@@ -355,7 +355,7 @@ footer .fine{margin-top:44px;padding-top:22px;border-top:1px solid rgba(252,251,
 </header>
 
 <!-- CHANCELLOR'S MESSAGE -->
-<section id="message" class="on-red">
+<section id="message">
   <div class="wrap">
     <div class="section-head rv">
       <span class="eyebrow">A Message on the Centenary</span>
@@ -366,8 +366,9 @@ footer .fine{margin-top:44px;padding-top:22px;border-top:1px solid rgba(252,251,
         <img src="https://cdn.jsdelivr.net/gh/swetchaartsai/BHAKTHI.HERITAGE.PROJECT.ART.CALENDAR.2026@main/Sadguru.jpg" alt="Sri Madhusudan Sai, Chancellor of Sri Sathya Sai University for Human Excellence and Founder of the One World One Family Mission" loading="lazy">
       </div>
       <div class="rv vision-copy">
-        <p>Anna's life is a life of inspiration, hard work, and complete surrender to Bhagwan. The body of work in his lifetime may look small, but remember that a mighty tree comes from a single seed. He was a social reformer, an educationist, and a patriot whose inspiration led to the immense good happening today. What began with Anna as a simple idea of Loka Seva Vrinda has now grown into the global One World One Family movement across 100 countries today.</p>
-        <p>Anna firmly believed that no child should ever be deprived of education. Yet, every year, bright students from Madiyala finish their schooling and stop because degree colleges are hours away and financially out of reach. To honor Anna's centenary and fulfill his enduring vision, we are now bringing a free Bachelors in Computational Sciences and Artificial Intelligence right back to his birthplace. <strong>Higher education is coming home to Madiyala.</strong></p>
+        <p>&#8220;Every year, bright students from Madiyala and its surrounding villages finish their schooling — and then stop. The nearest degree colleges are hours away, and for many families the cost of hostels, travel and fees puts higher education permanently out of reach. Anna believed no child should have to choose between their home and their future.</p>
+        <p class="pull">Anna believed no child should be deprived of education.</p>
+        <p>To understand the significance of this homecoming, we look back at a century of quiet, unstoppable growth. What began as a simple idea of Loka Seva Vrinda in this village has turned into one of the largest free education movements — One World One Family — in the country as well as abroad.&#8221;</p>
         <div class="vision-sig">
           <p class="vs-name">Sri Madhusudan Sai</p>
           <p class="vs-role">Chancellor, Sri Sathya Sai University for Human Excellence (SSSUHE)<br>Founder, One World One Family Mission (OWOF)</p>
